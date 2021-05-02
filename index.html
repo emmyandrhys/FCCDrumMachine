@@ -17,7 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
-<body class="text-center">
+<body class="text-center" id="drum-machine">
 
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
@@ -32,7 +32,7 @@
 
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Staley Drum Machine</h1>
-        <svg id="f54adf61-a9a9-48c0-81ce-cfa12f98da23" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 368.35 260.2">
+        <svg id="display" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 368.35 260.2">
            <!----> <defs>
                 <linearGradient id="a7f41eaf-eba0-4cb4-a5b2-1243d1678886" x1="7234.85" y1="7069.58" x2="7376.64" y2="7069.58" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stop-color="#2e3192"/>
@@ -53,7 +53,7 @@
                     <stop offset="0.22" stop-color="gray"/>
                     <stop offset="0.6" stop-color="#b3b3b3"/>
                     <stop offset="1" stop-color="#333"/></linearGradient>
-                    <linearGradient id="ba7a6f70-7c08-48e3-a639-64348fafb468" x1="37.67" y1="176.54" x2="42.58" y2="176.54" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#89744c"/><stop offset="0.5" stop-color="#574109"/><stop offset="1" stop-color="#3a2600"/></linearGradient>
+                   <!-- <linearGradient id="ba7a6f70-7c08-48e3-a639-64348fafb468" x1="37.67" y1="176.54" x2="42.58" y2="176.54" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#89744c"/><stop offset="0.5" stop-color="#574109"/><stop offset="1" stop-color="#3a2600"/></linearGradient>
                     <linearGradient id="a0899cd4-7856-48eb-ba5f-ae2ef74a7fa4" x1="311.68" y1="145.05" x2="318.18" y2="145.05" xlink:href="#ba7a6f70-7c08-48e3-a639-64348fafb468"/>
                     <linearGradient id="ee5b2e0b-6661-4c3f-beab-67af17d139e4" x1="253.89" y1="74.26" x2="262.88" y2="74.26" xlink:href="#ba7a6f70-7c08-48e3-a639-64348fafb468"/>
                     <linearGradient id="f4d12c02-90c4-4196-8887-7a138474cfab" x1="62.34" y1="85.32" x2="69.74" y2="85.32" xlink:href="#ba7a6f70-7c08-48e3-a639-64348fafb468"/>
@@ -71,7 +71,7 @@
                     <stop offset="1" stop-color="#ebd065"/></linearGradient>
                <radialGradient id="ff5fd459-71e6-4c4a-a547-04178e28cf47" cx="40.37" cy="176.19" r="39.37" gradientUnits="userSpaceOnUse">
                     <stop offset="0" stop-color="#ffc"/>
-                    <stop offset="1" stop-color="#bc8d4e"/></radialGradient>
+                    <stop offset="1" stop-color="#bc8d4e"/></radialGradient>-->
             </defs>
             <g id="a88e7450-379e-4296-864b-3e340f948eff" data-name="bass">
                 <g id="b988828f-bf5d-4e61-983f-08906fafac7a" data-name="bass">
@@ -98,9 +98,10 @@
             </g>
             <g id="e3d64e07-1ccc-4c5e-aa20-a6c0534ee380" data-name="floortom">
                 <polygon points="292.7 145.75 255.51 145.75 225.43 167.61 213.94 202.97 225.43 238.34 255.51 260.2 292.7 260.2 322.79 238.34 334.28 202.97 322.79 167.61 292.7 145.75"/>
-                <circle cx="274.11" cy="202.98" r="53.29" style="fill:#fff"/>
-                <circle data-key="67" class="drum"  cx="274.11" cy="202.98" r="53.29"/>
-                <circle data-key="67b" class="notPlaying"  cx="274.11" cy="202.98" r="53.29"/>
+                <a class="drum-pad" id="floortom"><circle cx="274.11" cy="202.98" r="53.29" style="fill:#fff"/></a>
+
+               <!-- <circle data-key="67" class="drum"  cx="274.11" cy="202.98" r="53.29"/>
+                <circle data-key="67b" class="notPlaying"  cx="274.11" cy="202.98" r="53.29"/>-->
             </g>
             <g id="b7fbf7ef-3c85-4ab9-9d3e-ef7890c2352c" data-name="Snare">
                 <polygon points="134.99 146.82 105.08 146.82 80.88 164.73 71.64 193.72 80.88 222.71 105.08 240.62 134.99 240.62 159.19 222.71 168.43 193.72 159.19 164.73 134.99 146.82"/>
@@ -111,9 +112,9 @@
                 <circle data-key="83b" class="notPlaying" cx="120.03" cy="193.72" r="42.87"/>
             </g>
             <g id="b46a1724-4167-4f3e-8c1d-caaa61105266" data-name="smalltom">
-                <polygon points="159.61 65.93 135.31 65.93 115.64 79.78 108.13 102.19 115.64 124.6 135.31 138.45 159.61 138.45 179.28 124.6 186.79 102.19 179.28 79.78 159.61 65.93"/>
+               <polygon points="159.61 65.93 135.31 65.93 115.64 79.78 108.13 102.19 115.64 124.6 135.31 138.45 159.61 138.45 179.28 124.6 186.79 102.19 179.28 79.78 159.61 65.93"/>
                 <circle cx="147.46" cy="102.19" r="34.83" style="fill:#fff"/>
-                <circle data-key="68" class="drum" style="paint-order: markers stroke; fill-opacity: 0.56; fill: url(#gradient-0);" cx="147.46" cy="102.19" r="34.83"/>
+                <circle data-key="68" class="drum" style="paint-order: markers stroke; fill-opacity: 0.56; fill: url(#gradient-0);" cx="147.46" cy="102.19" r="34.83"/>-->
             </g>
             <g id="a069201d-2f48-411c-a1db-828ebaa3344c" data-name="HiHat">
                 <rect x="7197.6" y="7205.13" width="13.59" height="16.05" transform="translate(-9978.55 -1444.09) rotate(-35.58)"/>
@@ -148,17 +149,37 @@
                 <circle class="cymbalblack" id="ba72961d-6bdf-4e57-a868-1c1599defee9" data-name="smcrashblack" cx="314.93" cy="145.05" r="3.25"/>
             </g>
         </svg>
+    <div class="row">
         <p class="lead">Type what you want to play. Cymbals are Q, W, E. Snare is A and S, Small Tom is D. Hi-Hat is Z.  Bass is X. C is Floor Tom.</p>
+      <div class="cymbalimage" id="closedhat"><p>Q</p>
+      <audio data-key="81" id="Q" src="Closed Hat.wav"></audio>
+      </div>
+      <div class="cymbalimage" id="ride"><p>W</p>
+      <audio data-key="87" id="W" src="Ride Cymbal.wav"></audio>
+      </div>
+      <div class="cymbalimage" id="crash"><p>E</p>
+      <audio data-key="69" id="E" src="Crash Cymbal.wav"></audio>
+      </div>
+      <div class="drumimage" id="snare"><p>A</p>
+      <audio data-key="65" id="A" src="Sample 1.wav"></audio>
+      </div>
+      <div class="drumimage" id="snare2"><p>S</p>
+      <audio data-key="83" id="S" src="Sample 2.wav"></audio>
+      </div>
+      <div class="drumimage" id="tom"><p>D</p>
+      <audio data-key="68" id="D" src="Mid Tom.wav"></audio>
+      </div>
+      <div class="drumimage" id="hihat">><p>Z</p>
+      <audio data-key="90" id="Z" src="Mid Hat.wav"></audio>
+      </div>
+      <div class='drumimage' id="bass"><p>X</p>
+      <audio data-key="88" id="X" src="Kick.wav"></audio>
+      </div>
+      <div class="drumimage" id="floortom"><p>C</p>
+          <audio data-key="67" id="c" src="Floor Tom.wav"></audio>
+      </div>
+      </div>
       </main>
-      <audio data-key="81" id="q" src="Closed Hat.wav"></audio>
-      <audio data-key="87" id="w" src="Ride Cymbal.wav"></audio>
-      <audio data-key="69" id="e" src="Crash Cymbal.wav"></audio>
-      <audio data-key="65" id="a" src="Sample 1.wav"></audio>
-      <audio data-key="83" id="s" src="Sample 2.wav"></audio>
-      <audio data-key="68" id="d" src="Mid Tom.wav"></audio>
-      <audio data-key="90" id="z" src="Mid Hat.wav"></audio>
-      <audio data-key="88" id="x" src="Kick.wav"></audio>
-      <audio data-key="67" id="c" src="Floor Tom.wav"></audio>
 
       <footer class="mastfoot mt-auto">
         <div class="inner">
@@ -194,7 +215,11 @@
         }
         const drums = document.querySelectorAll('circle');
         drums.forEach(drum=>drum.addEventListener('transitionend',drum.classList.remove('.playing')))
-        window.addEventListener('keydown', playDrum);
+        
+       // window.addEventListener('keydown', playDrum);
+        const boxes = document.querySelectorAll('div.drum-pad');
+        boxes.forEach(box=>box.addEventListener('click',playDrum))
+        boxes.forEach(box=>box.addEventListener('keydown',playDrum))
     </script>
 
 </body>
